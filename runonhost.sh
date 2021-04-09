@@ -4,6 +4,9 @@
 # Copy installation script to host
 cp /tmp/install.sh /host
 
+# Copy rpm to host
+cp /rpmtmp/amazon-ssm-agent.rpm /host
+
 # Copy wait script to the host 
 cp /wait.sh /host
 
