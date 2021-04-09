@@ -84,7 +84,7 @@ spec:
       hostPID: true
       restartPolicy: Always
       initContainers:
-      - image: 000000000000.dkr.ecr.us-west-2.amazonaws.com/ssm-agent-installer:1.2
+      - image: [ACCOUNT_ID].dkr.ecr.[REGION].amazonaws.com/ssm-agent-installer:1.2
         name: ssm-agent-installer
         securityContext:
           privileged: true
@@ -102,7 +102,7 @@ spec:
           path: /tmp/install
       serviceAccount: ssm-agent-installer
       containers:
-      - image: 000000000000.dkr.ecr.us-west-2.amazonaws.com/gcr.io/google-containers/pause:2.0
+      - image: [ACCOUNT_ID].dkr.ecr.[REGION].amazonaws.com/gcr.io/google-containers/pause:2.0
         name: pause
         securityContext:  
           allowPrivilegeEscalation: false  
